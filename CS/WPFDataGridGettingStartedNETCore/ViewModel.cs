@@ -1,20 +1,20 @@
-﻿using DevExpress.Mvvm;
+using DevExpress.Mvvm;
 using DevExpress.Mvvm.DataAnnotations;
 using DevExpress.Mvvm.Xpf;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using WPFDataGridGettingStartedNETCore.Models;
 
 namespace WPFDataGridGettingStartedNETCore {
-    public class ViewModel : ViewModelBase {
+	public class ViewModel : ViewModelBase {
         NorthwindEntities northwindDBContext;
 
-        public ObservableCollection<Order> Orders {
-            get => GetValue<ObservableCollection<Order>>();
+        public ICollection<Order> Orders {
+            get => GetValue<ICollection<Order>>();
             private set => SetValue(value);
         }
-        public ObservableCollection<Shipper> Shippers {
-            get => GetValue<ObservableCollection<Shipper>>();
+        public ICollection<Shipper> Shippers {
+            get => GetValue<ICollection<Shipper>>();
             private set => SetValue(value);
         }
 
@@ -22,10 +22,10 @@ namespace WPFDataGridGettingStartedNETCore {
             northwindDBContext = new NorthwindEntities();
 
             northwindDBContext.Orders.Load();
-            Orders = northwindDBContext.Orders.ToObservableCollection();
+            Orders = northwindDBContext.Orders.Local;
 
             northwindDBContext.Shippers.Load();
-            Shippers = northwindDBContext.Shippers.ToObservableCollection();
+            Shippers = northwindDBContext.Shippers.Local;
         }
 
         [Command]
