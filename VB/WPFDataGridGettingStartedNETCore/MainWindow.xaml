@@ -1,0 +1,54 @@
+<dx:ThemedWindow x:Class="WPFDataGridGettingStartedNETCore.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                 xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+                 xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+                 xmlns:local="clr-namespace:WPFDataGridGettingStartedNETCore" 
+                 Title="MainWindow"
+                 Height="450" Width="800">
+
+    <dx:ThemedWindow.DataContext>
+        <local:ViewModel/>
+    </dx:ThemedWindow.DataContext>
+
+    <dxg:GridControl ItemsSource="{Binding Orders}" FilterString="[OrderDate] > #2020-01-01# And [Freight] > 100">
+        <dxg:GridColumn FieldName="OrderId" IsSmart="True"/>
+        <dxg:GridColumn FieldName="CustomerId" IsSmart="True" SortOrder="Ascending" SortIndex="0"/>
+        <dxg:GridColumn FieldName="OrderDate" IsSmart="True" SortOrder="Descending" SortIndex="1"/>
+        <dxg:GridColumn FieldName="ShipVia" IsSmart="True">
+            <dxg:GridColumn.EditSettings>
+                <dxe:ComboBoxEditSettings ItemsSource="{Binding Shippers}"
+                                          DisplayMember="CompanyName"
+                                          ValueMember="ShipperId"/>
+            </dxg:GridColumn.EditSettings>
+        </dxg:GridColumn>
+        <dxg:GridColumn FieldName="Freight" IsSmart="True">
+            <dxg:GridColumn.EditSettings>
+                <dxe:TextEditSettings Mask="c" MaskType="Numeric" MaskUseAsDisplayFormat="True"/>
+            </dxg:GridColumn.EditSettings>
+        </dxg:GridColumn>
+        <dxg:GridColumn FieldName="ShipName" IsSmart="True"/>
+        <dxg:GridColumn FieldName="ShipCity" IsSmart="True" GroupIndex="1"/>
+        <dxg:GridColumn FieldName="ShipCountry" IsSmart="True" GroupIndex="0"/>
+
+        <dxg:GridControl.TotalSummary>
+            <dxg:GridSummaryItem FieldName="OrderId"
+                                 SummaryType="Count"
+                                 Alignment="Left"/>
+        </dxg:GridControl.TotalSummary>
+        <dxg:GridControl.GroupSummary>
+            <dxg:GridSummaryItem FieldName="Freight" SummaryType="Sum"
+                                 DisplayFormat="Sum of Freight is {0:c}"/>
+        </dxg:GridControl.GroupSummary>
+
+        <dxg:GridControl.View>
+            <dxg:TableView ShowFixedTotalSummary="True"
+                           AutoWidth="True"
+                           BestFitModeOnSourceChange="VisibleRows"
+                           ShowUpdateRowButtons="OnCellEditorOpen"
+                           ValidateRowCommand ="{Binding ValidateAndSaveCommand}">
+            </dxg:TableView>
+        </dxg:GridControl.View>
+    </dxg:GridControl>
+</dx:ThemedWindow>
