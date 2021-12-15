@@ -13,7 +13,7 @@
     <ApplicationDefinition Include="App.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.Wpf" Version="21.2.2" />
+    <PackageReference Include="DevExpress.Wpf" Version="21.2.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
   </ItemGroup>
   <ItemGroup>
