@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # WPF Data Grid - Getting Started (.NET 6)
 
-This example is the .NET 6 application created in the [Getting Started](https://docs.devexpress.com/WPF/5863/controls-and-libraries/data-grid/getting-started) tutorial. It demonstrates the base functionality of the DevExpress [Data Grid](https://docs.devexpress.com/WPF/6084/controls-and-libraries/data-grid).
+This example is the .NET 6 application created in the [Getting Started](https://docs.devexpress.com/WPF/5863/controls-and-libraries/data-grid/getting-started) tutorial. It demonstrates the base functionality of the [DevExpress Data Grid](https://docs.devexpress.com/WPF/6084/controls-and-libraries/data-grid).
 
 ![image](https://user-images.githubusercontent.com/65009440/206664608-5cce8396-0b68-4d77-af15-b60e3da39ffb.png)
 
