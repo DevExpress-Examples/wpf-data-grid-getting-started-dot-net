@@ -4,13 +4,13 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-# WPF Data Grid - Getting Started (.NET 6)
+# WPF Data Grid - Getting Started (.NET)
 
-This example is the .NET 6 application created in the [Getting Started](https://docs.devexpress.com/WPF/5863/controls-and-libraries/data-grid/getting-started) tutorial. It demonstrates the base functionality of the [DevExpress Data Grid](https://docs.devexpress.com/WPF/6084/controls-and-libraries/data-grid).
+This example is the .NET application created in the [Getting Started](https://docs.devexpress.com/WPF/5863/controls-and-libraries/data-grid/getting-started) tutorial. It demonstrates the base functionality of the [DevExpress Data Grid](https://docs.devexpress.com/WPF/6084/controls-and-libraries/data-grid).
 
 ![image](https://user-images.githubusercontent.com/65009440/206664608-5cce8396-0b68-4d77-af15-b60e3da39ffb.png)
 
-This project is based on the following example: [WPF Blank .NET 6 App with the Northwind Database](https://github.com/DevExpress-Examples/wpf-blank-dot-net-app-with-the-northwind-database).
+This project is based on the following example: [WPF Blank .NET App with the Northwind Database](https://github.com/DevExpress-Examples/wpf-blank-dot-net-app-with-the-northwind-database).
 
 **See also**: [WPF Data Grid - Getting Started (.NET Framework)](https://github.com/DevExpress-Examples/wpf-data-grid-getting-started-net-framework)
 
